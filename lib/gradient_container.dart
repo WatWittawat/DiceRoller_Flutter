@@ -12,8 +12,8 @@ class GradientContainer extends StatelessWidget {
       {super.key,
       this.colors = const [Colors.deepPurple, Colors.indigoAccent]});
 
-  const GradientContainer.red({super.key})
-      : colors = const [Colors.red, Colors.deepOrange];
+  const GradientContainer.red({super.key, color})
+      : colors = color ?? const [Colors.red, Colors.deepOrange];
 
   final List<Color> colors;
 
@@ -26,7 +26,7 @@ class GradientContainer extends StatelessWidget {
         begin: myTopLeft,
         end: myBottomRight,
       )),
-      child: Center(
+      child: const Center(
         child: DiceRoller(),
       ),
     );
